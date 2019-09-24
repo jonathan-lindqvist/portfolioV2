@@ -1,0 +1,144 @@
+html {
+  position: relative;
+  min-height: 100%; 
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  align-content: center;
+}
+
+.gutter{
+  width: 25%;
+}
+
+.main{
+  width: 50%;
+}
+.top{
+  margin-top: 90px;
+  justify-content: flex-start;
+}
+
+.align-cent{
+  display: flex;
+  align-items: center;
+}
+
+section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.profile{
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
+
+.ml-5{
+  margin-left: 5px;
+}
+
+.mr-5{
+  margin-right: 5px;
+}
+
+.mr{
+  margin-right: 30%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px 15px 15px 0;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.skill-section{
+  flex-direction: column;
+}
+
+.top-skills{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  margin-left: 10%;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  height: 50%;
+  width: 8px;
+  background: #ccc;
+  border-radius: 5px;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  width: 8px;
+  background: black;
+  height: 0%;
+  border-radius: 5px;
+}
+
+a {
+  color: #404040;
+  text-decoration: none; /* no underline */
+}
+
+a:hover{
+  color: #404040;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.last{
+  margin-bottom: 600px;
+}
+
+.github{
+  width: 50px;
+  height: 50px;
+}
+
+.disabled{
+  color: lightgrey;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.inlinelink{
+  color: #26a65b;
+}
+
+.inlinelink:hover{
+  color: #00e640;
+}

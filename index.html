@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfolio</title>
+  <link href="css/primitiveui.css" rel="stylesheet"/>
+  <link href="css/main.scss" rel="stylesheet"/>
+  <script type="text/javascript" src="js/main.js"></script>
+  
+</head>
+<body>
+  <div class="header">
+    <ul class="mr nav">
+      <li><a id="projects" onclick="scrollToSection(this.id)" href="#projects">Projects</a></li>
+      <li><a id="skills" onclick="scrollToSection(this.id)" href="#skills">Skills</a></li>
+      <li><a id="about" onclick="scrollToSection(this.id)" href="#about">About me</a></li>
+      <li><a id="work" onclick="scrollToSection(this.id)" href="#work">Work</a></li>
+      <li><a id="education" onclick="scrollToSection(this.id)" href="#education">Education</a></li>
+      <li><a id="fun" onclick="scrollToSection(this.id)" href="#fun">Fun facts</a></li>
+    </ul>
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+  </div>
+  <div class="gutter">
+  </div>
+  <div class="main">
+    <section class="top"> 
+      <div class="mr-5">
+        <img class="profile" src="img/me-crop.jpg" alt="Jonathans Face">
+      </div>
+      <div class="ml-5 align-cent">
+        <h1>Hi, I'm Jonathan!</h1>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h2><a name="projects">My projects:</a></h2>
+        <h3>GGHub</h3>
+        <p>
+          GGHub was my first "real" spare time project. The main purpose with the 
+          project was for me to learn and get comfortable with Rails.
+          GGHub is a site that allows users to signup and create a profile. People can then 
+          create and join tournaments with their team for various video games. People can 
+          also publish news articles.
+        </p>
+        <p>Insert image here of site here</p>
+        <a href="https://github.com/QvistJ/ggHUB"><img class="github" src="img/github.png" alt="Link to github page"></a>
+        <a name="monitoring"><h3>Monitoring Service</h3></a>
+        <p>
+          When working at Ericsson AB I helped create a monitoring service for a DevOps team.
+          The project involved;
+          GitLab (CI),
+          Docker,
+          Ruby,
+          APIs,
+          Kubernetes
+        </p>
+        <p class="disabled">No images or repository can be provided.</p>
+        <a name="RDR"><h3>Ruby, Docker and RabbitMQ</h3></a>
+        <p>
+          At Ericsson AB I helped create a project that involved Ruby, Docker, RabbitMQ and Kubernetes.
+        </p>
+        <p class="disabled">No images or repository can be provided.</p>
+        <h3>Rails-react-api</h3>
+        <p>
+          Rails-react-api is exactly what it sounds like, it is a basic app that uses
+          Ruby on Rails as the backend and React as the frontend. The app lets you 
+          create/edit/delete/view tasks with titles, description, points and status. 
+        </p>
+        <p>Insert image here of site here</p>
+        <a href=""><img class="github" src="img/github.png" alt="Link to github page"></a>
+      </div>
+    </section>
+    <section class="skill-section">
+      <h2><a name="skills">My skills:</a></h2>
+      <div class="top-skills">
+        <div>
+          <h3>Top skills</h3>
+          <table>
+            <tr>
+              <th>Subject</th>
+              <th>Experience</th>
+            </tr>
+            <tr>
+              <td>Ruby</td>
+              <td>1 year professional & 3 years education</td>
+            </tr>
+            <tr>
+              <td>Ruby on Rails</td>
+              <td>1 year education</td>
+            </tr>
+            <tr>
+              <td>Git</td>
+              <td>1 year professional & 1 year education</td>
+            </tr>
+          </table> 
+        </div>
+        <div>
+          <h3>Industry Knowledge</h3>
+          <table>
+            <tr>
+              <th>Subject</th>
+              <th>Experience</th>
+            </tr>
+            <tr>
+              <td>Scrum</td>
+              <td>1 year education</td>
+            </tr>
+            <tr>
+              <td>Scrumban</td>
+              <td>1 year professional</td>
+            </tr>
+          </table> 
+        </div>
+      </div>
+      <div class="top-skills">
+        <div>
+          <h3>Tools and Technologies</h3>
+          <table>
+            <tr>
+              <th>Subject</th>
+              <th>Experience</th>
+            </tr>
+            <tr>
+              <td>Docker</td>
+              <td>1 year professional</td>
+            </tr>
+            <tr>
+              <td>SQLite</td>
+              <td>2 years education</td>
+            </tr>
+            <tr>
+              <td>Postgres</td>
+              <td>1 year education</td>
+            </tr>
+            <tr>
+              <td>Vue.js</td>
+              <td>1 year education</td>
+            </tr>
+            <tr>
+              <td>Kubernetes</td>
+              <td>1 year professional</td>
+            </tr>
+            <tr>
+              <td>CI/CD</td>
+              <td>1 year professional</td>
+            </tr>
+            <tr>
+              <td>Sinatra</td>
+              <td>2 years education</td>
+            </tr>
+          </table> 
+        </div>
+        <div>
+            <h3>Languages</h3>
+            <table>
+              <tr>
+                <th>Language</th>
+                <th>Experience</th>
+              </tr>
+              <tr>
+                <td>CSS</td>
+                <td>4 years education</td>
+              </tr>
+              <tr>
+                <td>SCSS</td>
+                <td>1 year education</td>
+              </tr>
+              <tr>
+                <td>HTML</td>
+                <td>4 years education</td>
+              </tr>
+              <tr>
+                <td>JavaScript</td>
+                <td>4 years education</td>
+              </tr>
+              <tr>
+                <td>jQuery</td>
+                <td>2 years education</td>
+              </tr>
+              <tr>
+                <td>Elixir</td>
+                <td>1 year education</td>
+              </tr>
+              <tr>
+                <td>SQL</td>
+                <td>2 years education</td>
+              </tr>
+            </table> 
+          </div>
+      </div>
+      <div>
+        <h3>Other skills</h3>
+        <table>
+          <tr>
+            <th>Subject</th>
+            <th>Experience</th>
+          </tr>
+          <tr>
+            <td>Github</td>
+            <td>3 year education</td>
+          </tr>
+          <tr>
+            <td>GitLab</td>
+            <td>1 year professional</td>
+          </tr>
+        </table> 
+      </div>
+    </section>
+    <section>
+      <div>
+        <h2><a name="about">About me:</a></h2>
+        <p>
+          I live in Gothenburg, Sweden. Born 1999. My goals are to challenge myself and
+          always aim to learn something new, everything from work to hobbies.
+          In my spare time I like to workout, to improve my fitness and health. And 
+          when I am not training I am either playing video games, hanging out with friends,
+          reading or programming.
+      </div>
+    </section>
+    <section>
+      <div>
+        <h2><a name="work">Work experience:</a></h2>
+        <h3>Ericsson AB</h3>
+        <p class="bold">Junior Software Developer</p>
+        <p class="bold">August 2019 - Present</p>
+        <p>
+          Extended my time at Ericsson AB after the summer was over. 
+          My work involved Docker.
+        </p>
+        <h3>Ericsson AB</h3>
+        <p class="bold">Summer Employee (Junior Software Developer)</p>
+        <p class="bold">April 2019 - August 2019</p>
+        <p>
+          During this employment I finished the the monitoring service and started working on project
+          involving Ruby, Docker and RabbitMQ
+          <a class="inlinelink" href="#RDR">(view in projects)</a>.
+        </p>
+        <h3>Ericsson AB</h3>
+        <p class="bold">Summer Employee (Junior Software Developer)</p>
+        <p class="bold">February 2019 - April 2019</p>
+        <p>
+          During my education at NTI I got an internship at Ercisson AB as a 
+          Junior Software Developer. I worked with a DevOps team and helped create and
+          maintain a monitoring service
+          <a class="inlinelink" href="#monitoring">(view in projects)</a>.
+        </p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h2><a name="education">Education:</a></h2>
+        <h3>NTI Johanneberg</h3>
+        <p class="bold">August 2018 - June 2019</p>
+        <p>
+          Studied to become technical college graduate with 
+          profile Information Technology, orientation software design. 
+        </p>
+        INSERT LINK TO PROOF
+        <h3>ITG Gothenburg</h3>
+        <p class="bold">August 2015 - June 2018</p>
+        <p>
+          Studied Engineering with orientation IT
+        </p>
+        INSERT LINK TO PROOF
+      </div>
+    </section>
+    <section class="last">
+      <div>
+        <h2><a name="fun">Fun facts:</a></h2>
+        <p>
+          I speak both swedish and english fluently, but I can also understand basic german and spanish. 
+          On top of that I'm also learning french and russian in my spare time. 
+        </p>
+        <p>
+          I have completed Though Viking Gothenburg, and aim to do more obstacle courses like Toughest.
+        </p>
+      </div>
+    </section>
+  </div>
+  <div class="gutter"></div>
+</body>
+</html>
