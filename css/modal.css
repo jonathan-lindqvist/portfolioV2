@@ -4,14 +4,9 @@
   justify-content: flex-start;
 }
 
-.column{
-}
-
-
 .thumbnails{
   display: flex;
   flex-direction: row;
-
 }
 
 /* The Modal (background) */
@@ -19,7 +14,7 @@
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 1rem;
   left: 0;
   top: 0;
   width: 100%;
@@ -55,7 +50,7 @@
 }
 
 /* Hide the slides by default */
-.mySlides {
+.mySlidesGG, .mySlidesRR {
   display: none;
 }
 
@@ -106,12 +101,13 @@
   color: white;
 }
 
-img.demo {
+img.demoGG, img.demoRR {
   opacity: 0.6;
 }
 
 .active,
-.demo:hover {
+.demmoRR:hover,
+.demoGG:hover {
   opacity: 1;
 }
 
@@ -124,7 +120,9 @@ img.hover-shadow {
 }
 
 .modal-size{
-  margin-right: 1rem;
+  border: 1px solid gray;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
   border-radius: 5px;
   width: 50%;
   height: 50%;

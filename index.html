@@ -49,68 +49,68 @@
         </p>
          <!-- Images used to open the lightbox -->
         <div class="row-modal">
-            <img src="img/gghub/gghub-home.png" onclick="openModal();currentSlide(1)" class="hover-shadow modal-size">
-            <img src="img/gghub/gghub-feed.png" onclick="openModal();currentSlide(2)" class="hover-shadow modal-size">
-            <img src="img/gghub/gghub-news.png" onclick="openModal();currentSlide(3)" class="hover-shadow modal-size">
-            <img src="img/gghub/gghub-players.png" onclick="openModal();currentSlide(4)" class="hover-shadow modal-size">
+            <img src="img/gghub/gghub-home.png" onclick="openModalGG();currentSlideGG(1)" class="hover-shadow modal-size">
+            <img src="img/gghub/gghub-feed.png" onclick="openModalGG();currentSlideGG(2)" class="hover-shadow modal-size">
+            <img src="img/gghub/gghub-news.png" onclick="openModalGG();currentSlideGG(3)" class="hover-shadow modal-size">
+            <img src="img/gghub/gghub-players.png" onclick="openModalGG();currentSlideGG(4)" class="hover-shadow modal-size">
         </div>
 
         <!-- The Modal/Lightbox -->
-        <div id="myModal" class="modal">
-          <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div id="myModalGG" class="modal">
+          <span class="close cursor" onclick="closeModalGG()">&times;</span>
           <div class="modal-content">
 
-            <div class="mySlides">
+            <div class="mySlidesGG">
               <img src="img/gghub/gghub-home.png" style="width:100%; height: 75vh;">
             </div>
 
-            <div class="mySlides">
+            <div class="mySlidesGG">
               <img src="img/gghub/gghub-feed.png" style="width:100%; height: 75vh;">
             </div>
 
-            <div class="mySlides">
+            <div class="mySlidesGG">
               <img src="img/gghub/gghub-news.png" style="width:100%; height: 75vh;">
             </div>
 
-            <div class="mySlides">
+            <div class="mySlidesGG">
               <img src="img/gghub/gghub-player.png" style="width:100%; height: 75vh;">
             </div>
 
-            <div class="mySlides">
+            <div class="mySlidesGG">
               <img src="img/gghub/gghub-players.png" style="width:100%; height: 75vh;">
             </div>
 
-            <div class="mySlides">
+            <div class="mySlidesGG">
               <img src="img/gghub/gghub-settings.png" style="width:100%; height: 75vh;">
             </div>
 
-            <div class="mySlides">
+            <div class="mySlidesGG">
               <img src="img/gghub/gghub-signin.png" style="width:100%; height: 75vh;">
             </div>
 
-            <div class="mySlides">
+            <div class="mySlidesGG">
               <img src="img/gghub/gghub-signup.png" style="width:100%; height: 75vh;">
             </div>
 
             <!-- Next/previous controls -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlidesGG(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlidesGG(1)">&#10095;</a>
 
             <!-- Caption text -->
             <div class="caption-container">
-              <p id="caption"></p>
+              <p id="captionGG"></p>
             </div>
 
             <!-- Thumbnail image controls -->
             <div class="thumbnails">
-                <img class="demo modal-size" src="img/gghub/gghub-home.png" onclick="currentSlide(1)" alt="GGHub Home">
-                <img class="demo modal-size" src="img/gghub/gghub-feed.png" onclick="currentSlide(2)" alt="GGHub Feed">
-                <img class="demo modal-size" src="img/gghub/gghub-news.png" onclick="currentSlide(3)" alt="GGHub News">
-                <img class="demo modal-size" src="img/gghub/gghub-player.png" onclick="currentSlide(4)" alt="GGHub Player">
-                <img class="demo modal-size" src="img/gghub/gghub-players.png" onclick="currentSlide(5)" alt="GGHub Players">
-                <img class="demo modal-size" src="img/gghub/gghub-settings.png" onclick="currentSlide(6)" alt="GGHub Settings">
-                <img class="demo modal-size" src="img/gghub/gghub-signin.png" onclick="currentSlide(7)" alt="GGHub Sign In">
-                <img class="demo modal-size" src="img/gghub/gghub-signup.png" onclick="currentSlide(8)" alt="GGHub Sign Up">
+                <img class="demoGG modal-size" src="img/gghub/gghub-home.png" onclick="currentSlideGG(1)" alt="GGHub Home">
+                <img class="demoGG modal-size" src="img/gghub/gghub-feed.png" onclick="currentSlideGG(2)" alt="GGHub Feed">
+                <img class="demoGG modal-size" src="img/gghub/gghub-news.png" onclick="currentSlideGG(3)" alt="GGHub News">
+                <img class="demoGG modal-size" src="img/gghub/gghub-player.png" onclick="currentSlideGG(4)" alt="GGHub Player">
+                <img class="demoGG modal-size" src="img/gghub/gghub-players.png" onclick="currentSlideGG(5)" alt="GGHub Players">
+                <img class="demoGG modal-size" src="img/gghub/gghub-settings.png" onclick="currentSlideGG(6)" alt="GGHub Settings">
+                <img class="demoGG modal-size" src="img/gghub/gghub-signin.png" onclick="currentSlideGG(7)" alt="GGHub Sign In">
+                <img class="demoGG modal-size" src="img/gghub/gghub-signup.png" onclick="currentSlideGG(8)" alt="GGHub Sign Up">
             </div>
           </div>
         </div> 
@@ -136,7 +136,53 @@
           Ruby on Rails as the backend and React as the frontend. The app lets you 
           create/edit/delete/view tasks with titles, description, points and status. 
         </p>
-        <p>Insert image here of site here</p>
+        <!-- Images used to open the lightbox -->
+        <div class="row-modal">
+          <img src="img/rails-react/rails-react-home.png" onclick="openModalRR();currentSlideRR(1)" class="hover-shadow modal-size">
+          <img src="img/rails-react/rails-react-task.png" onclick="openModalRR();currentSlideRR(2)" class="hover-shadow modal-size">
+          <img src="img/rails-react/rails-react-edit.png" onclick="openModalRR();currentSlideRR(3)" class="hover-shadow modal-size">
+          <img src="img/rails-react/rails-react-create.png" onclick="openModalRR();currentSlideRR(4)" class="hover-shadow modal-size">
+      </div>
+
+      <!-- The Modal/Lightbox -->
+      <div id="myModalRR" class="modal">
+        <span class="close cursor" onclick="closeModalRR()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlidesRR">
+            <img src="img/rails-react/rails-react-home.png" style="width:100%; height: 75vh;">
+          </div>
+
+          <div class="mySlidesRR">
+            <img src="img/rails-react/rails-react-task.png" style="width:100%; height: 75vh;">
+          </div>
+
+          <div class="mySlidesRR">
+            <img src="img/rails-react/rails-react-edit.png" style="width:100%; height: 75vh;">
+          </div>
+
+          <div class="mySlidesRR">
+            <img src="img/rails-react/rails-react-create.png" style="width:100%; height: 75vh;">
+          </div>
+
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="plusSlidesRR(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlidesRR(1)">&#10095;</a>
+
+          <!-- Caption text -->
+          <div class="caption-container">
+            <p id="captionRR"></p>
+          </div>
+
+          <!-- Thumbnail image controls -->
+          <div class="thumbnails">
+              <img class="demoRR modal-size" src="img/rails-react/rails-react-home.png" onclick="currentSlideRR(1)" alt="rails-react Home">
+              <img class="demoRR modal-size" src="img/rails-react/rails-react-task.png" onclick="currentSlideRR(2)" alt="rails-react Task">
+              <img class="demoRR modal-size" src="img/rails-react/rails-react-edit.png" onclick="currentSlideRR(3)" alt="rails-react Edit">
+              <img class="demoRR modal-size" src="img/rails-react/rails-react-create.png" onclick="currentSlideRR(4)" alt="rails-react Create">
+          </div>
+        </div>
+      </div> 
         
       </div>
     </section>
