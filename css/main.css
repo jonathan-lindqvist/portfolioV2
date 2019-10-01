@@ -112,6 +112,11 @@ a:hover{
   text-decoration: none;
 }
 
+ul {
+  padding: 0;
+  white-space: nowrap;
+}
+
 li {
   list-style-type: none;
   margin-bottom: 1.5625em;
@@ -149,4 +154,13 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+
+.table-col{
+  width: 50%;
+}
+
+.table-margin{
+  margin-left: 2.5rem;
 }
