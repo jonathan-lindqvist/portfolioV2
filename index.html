@@ -7,7 +7,9 @@
   <title>Portfolio</title>
   <link href="css/primitiveui.css" rel="stylesheet"/>
   <link href="css/main.css" rel="stylesheet"/>
+  <link href="css/modal.css" rel="stylesheet"/>
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
 </head>
 <body>
   <div class="header">
@@ -45,7 +47,73 @@
           create and join tournaments with their team for various video games. People can 
           also publish news articles.
         </p>
-        <p>Insert image here of site here</p>
+         <!-- Images used to open the lightbox -->
+        <div class="row-modal">
+            <img src="img/gghub/gghub-home.png" onclick="openModal();currentSlide(1)" class="hover-shadow modal-size">
+            <img src="img/gghub/gghub-feed.png" onclick="openModal();currentSlide(2)" class="hover-shadow modal-size">
+            <img src="img/gghub/gghub-news.png" onclick="openModal();currentSlide(3)" class="hover-shadow modal-size">
+            <img src="img/gghub/gghub-players.png" onclick="openModal();currentSlide(4)" class="hover-shadow modal-size">
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+
+            <div class="mySlides">
+              <img src="img/gghub/gghub-home.png" style="width:100%; height: 75vh;">
+            </div>
+
+            <div class="mySlides">
+              <img src="img/gghub/gghub-feed.png" style="width:100%; height: 75vh;">
+            </div>
+
+            <div class="mySlides">
+              <img src="img/gghub/gghub-news.png" style="width:100%; height: 75vh;">
+            </div>
+
+            <div class="mySlides">
+              <img src="img/gghub/gghub-player.png" style="width:100%; height: 75vh;">
+            </div>
+
+            <div class="mySlides">
+              <img src="img/gghub/gghub-players.png" style="width:100%; height: 75vh;">
+            </div>
+
+            <div class="mySlides">
+              <img src="img/gghub/gghub-settings.png" style="width:100%; height: 75vh;">
+            </div>
+
+            <div class="mySlides">
+              <img src="img/gghub/gghub-signin.png" style="width:100%; height: 75vh;">
+            </div>
+
+            <div class="mySlides">
+              <img src="img/gghub/gghub-signup.png" style="width:100%; height: 75vh;">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="thumbnails">
+                <img class="demo modal-size" src="img/gghub/gghub-home.png" onclick="currentSlide(1)" alt="GGHub Home">
+                <img class="demo modal-size" src="img/gghub/gghub-feed.png" onclick="currentSlide(2)" alt="GGHub Feed">
+                <img class="demo modal-size" src="img/gghub/gghub-news.png" onclick="currentSlide(3)" alt="GGHub News">
+                <img class="demo modal-size" src="img/gghub/gghub-player.png" onclick="currentSlide(4)" alt="GGHub Player">
+                <img class="demo modal-size" src="img/gghub/gghub-players.png" onclick="currentSlide(5)" alt="GGHub Players">
+                <img class="demo modal-size" src="img/gghub/gghub-settings.png" onclick="currentSlide(6)" alt="GGHub Settings">
+                <img class="demo modal-size" src="img/gghub/gghub-signin.png" onclick="currentSlide(7)" alt="GGHub Sign In">
+                <img class="demo modal-size" src="img/gghub/gghub-signup.png" onclick="currentSlide(8)" alt="GGHub Sign Up">
+            </div>
+          </div>
+        </div> 
         <a name="monitoring"><h3>Monitoring Service</h3></a>
         <p>
           When working at Ericsson AB I helped create a monitoring service for a DevOps team.
