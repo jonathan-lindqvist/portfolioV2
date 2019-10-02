@@ -164,3 +164,15 @@ li {
 .table-margin{
   margin-left: 2.5rem;
 }
+
+.proof{
+  height: 15%;
+  width: 10%;
+  object-fit: scale-down;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+h2{
+  text-decoration-line: underline;
+}
