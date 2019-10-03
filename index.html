@@ -14,12 +14,11 @@
 <body>
   <div class="header">
     <ul class="mr">
-      <li><a id="projects" onclick="scrollToSection(this.id)" href="#projects">Projects</a></li>
-      <li><a id="skills" onclick="scrollToSection(this.id)" href="#skills">Skills</a></li>
-      <li><a id="about" onclick="scrollToSection(this.id)" href="#about">About me</a></li>
-      <li><a id="work" onclick="scrollToSection(this.id)" href="#work">Work</a></li>
-      <li><a id="education" onclick="scrollToSection(this.id)" href="#education">Education</a></li>
-      <li><a id="fun" onclick="scrollToSection(this.id)" href="#fun">Fun facts</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#extra">Extra</a></li>
     </ul>
     <div class="progress-container">
       <div class="progress-bar" id="myBar"></div>
@@ -28,6 +27,13 @@
   <div class="gutter">
   </div>
   <div class="main">
+    <nav>
+      <ul class="nav-ul">
+        <li><h1 class="current"><a href="/">Portfolio</a></h1></li>
+        <li><h1>|</h1> </li>
+        <li><h1><a href="about.html">About</a></h1></li>
+      </ul>
+    </nav>
     <section class="top"> 
       <div class="mr-5">
         <img class="profile" src="img/me-crop.jpg" alt="Jonathans Face">
@@ -38,7 +44,7 @@
     </section>
     <section>
       <div>
-        <h2><a name="projects">My projects</a></h2>
+        <h2 id="projects">My projects</h2>
         <div class="project-title"><h3>GGhub</h3><a href="https://github.com/jonathan-lindqvist/ggHUB"><img class="github" src="img/github.png" alt="Link to github page"></a></div>
         <p>
           GGHub was my first "real" spare time project. The main purpose with the 
@@ -187,7 +193,7 @@
       </div>
     </section>
     <section class="skill-section">
-      <h2><a name="skills">My skills</a></h2>
+      <h2 id="skills">My skills</h2>
       <div class="top-skills">
         <div class="table-col">
           <h3>Top skills</h3>
@@ -298,18 +304,7 @@
     </section>
     <section>
       <div>
-        <h2><a name="about">About me</a></h2>
-        <p>
-          I live in Gothenburg, Sweden. Born 1999. My goals are to challenge myself and
-          always aim to learn something new, everything from work to hobbies.
-          In my spare time I like to workout, to improve my fitness and health. And 
-          when I am not training I am either playing video games, hanging out with friends,
-          reading or programming.
-      </div>
-    </section>
-    <section>
-      <div>
-        <h2><a name="work">Work experience</a></h2>
+        <h2 id="work">Work experience</h2>
         <h3>Ericsson AB</h3>
         <p class="bold">Junior Software Developer</p>
         <p class="bold">April 2019 - October 2019</p>
@@ -342,7 +337,7 @@
     </section>
     <section>
       <div>
-        <h2><a name="education">Education</a></h2>
+        <h2 id="education">Education</h2>
         <h3>NTI-Gymnasiet Johanneberg</h3>
         <p class="bold">August 2018 - June 2019</p>
         <p>
@@ -372,14 +367,11 @@
     </section>
     <section class="last">
       <div>
-        <h2><a name="fun">Fun facts</a></h2>
-        <p>
-          I speak both swedish and english fluently, but I can also understand basic german and spanish. 
-          On top of that I'm also learning french and russian in my spare time. 
+        <h2 id="extra">Extra</h2>
+        <p>If you want to get in contact with me then you
+          can always contact me on <a class="inlinelink" href="https://www.linkedin.com/in/jonathan-lindqvist-915a01181/">LinkedIn</a>.
         </p>
-        <p>
-          I have completed Though Viking Gothenburg, and aim to do more obstacle courses like Toughest.
-        </p>
+        <p>(Grades can be provided if contacted)</p>
       </div>
     </section>
   </div>

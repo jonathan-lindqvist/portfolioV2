@@ -7,9 +7,3 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.height = scrolled + "%";
 } 
-
-
-function scrollToSection(id) {
-  var element = document.getElementsByName(id)[0];
-  element.scrollIntoView({behavior: "smooth"});
-}
