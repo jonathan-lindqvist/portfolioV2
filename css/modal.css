@@ -52,6 +52,7 @@
 /* Hide the slides by default */
 .mySlidesGG, .mySlidesRR {
   display: none;
+  object-fit: contain;
 }
 
 /* Next & previous buttons */
@@ -123,7 +124,40 @@ img.hover-shadow {
   border: 1px solid gray;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
   border-radius: 5px;
   width: 25%;
   height: 25%;
+  object-fit: contain;
 }
+
+.selected-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 780px) {
+  .modal{
+    padding-top: 3.5rem;
+  }
+
+  .thumbnails{
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .modal-size{
+    height: 50%;
+    width: 50%;
+  }
+
+  .prev, .next{
+    display: none;
+  }
+
+  .row-modal{
+    flex-wrap: wrap;
+  }
+}
+

@@ -167,8 +167,7 @@ li {
 }
 
 .proof{
-  height: 15%;
-  width: 10%;
+  width: 25%;
   object-fit: scale-down;
   border: 1px solid black;
   border-radius: 5px;
@@ -191,3 +190,33 @@ nav{
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+@media only screen and (max-width: 780px) {
+  .gutter, .header{
+    display: none;
+  }
+
+  .main{
+    width: 100%;
+    height: 100%;
+    margin: 0 25px 0 25px;
+  }
+
+  .proof{
+    width: 50%;
+  }
+
+  .top-skills{
+    flex-direction: column;
+  }
+
+  .table-col{
+    width: 100%;
+  }
+
+  .table-margin{
+    margin: 0;
+  }
+
+}
+
