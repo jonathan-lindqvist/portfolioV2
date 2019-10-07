@@ -7,6 +7,7 @@
 .thumbnails{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /* The Modal (background) */
@@ -107,7 +108,7 @@ img.demoGG, img.demoRR {
 }
 
 .active,
-.demmoRR:hover,
+.demoRR:hover,
 .demoGG:hover {
   opacity: 1;
 }
@@ -120,15 +121,18 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.modal-size{
+.modal-size, .modal-size-preview{
   border: 1px solid gray;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 5px;
-  width: 25%;
-  height: 25%;
+  width: 15%;
   object-fit: contain;
+}
+
+.modal-size-preview{
+  width: 25%;
 }
 
 .selected-img{
@@ -139,7 +143,7 @@ img.hover-shadow {
 
 @media only screen and (max-width: 780px) {
   .modal{
-    padding-top: 3.5rem;
+    padding-top: 4.5rem;
   }
 
   .thumbnails{
@@ -148,7 +152,10 @@ img.hover-shadow {
   }
 
   .modal-size{
-    height: 50%;
+    width: 100%;
+  }
+
+  .modal-size-preview{
     width: 50%;
   }
 
@@ -158,6 +165,14 @@ img.hover-shadow {
 
   .row-modal{
     flex-wrap: wrap;
+  }
+
+  .selected-img, .caption-container{
+    display: none;
+  }
+
+  .demoGG, .demoRR{
+    opacity: 1 !important;
   }
 }
 
