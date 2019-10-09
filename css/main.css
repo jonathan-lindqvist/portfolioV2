@@ -12,6 +12,7 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100%;
   align-content: center;
+  background-color: #f7f7f7;
 }
 
 .gutter{
@@ -136,7 +137,7 @@ li {
 }
 
 .disabled{
-  color: lightgrey;
+  color: #9a9a9a;
 }
 
 .bold{
@@ -144,11 +145,12 @@ li {
 }
 
 .inlinelink{
-  color: #26a65b;
+  color: #0366EE;
 }
 
 .inlinelink:hover{
-  color: #00e640;
+  color: #0246a2;
+  text-decoration: underline;
 }
 
 .project-title{
