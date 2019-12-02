@@ -1,86 +1,44 @@
-//GGHub
+// Generic modal
+let slideIndex = 1
 
-// Open the Modal
-function openModalGG() {
-  document.getElementById("myModalGG").style.display = "block";
+const openModal = (project) => {
+  document.getElementById("myModal" + project).style.display = "block"
 }
 
-// Close the Modal
-function closeModalGG() {
-  document.getElementById("myModalGG").style.display = "none";
+const closeModal = (project) => {
+  document.getElementById("myModal" + project).style.display = "none"
 }
 
-var slideIndex = 1;
-showSlidesGG(slideIndex);
-
-// Next/previous controls
-function plusSlidesGG(n) {
-  showSlidesGG(slideIndex += n);
+const plusSlides = (project, index) => {
+  showSlides(project, slideIndex += index)
 }
 
-// Thumbnail image controls
-function currentSlideGG(n) {
-  showSlidesGG(slideIndex = n);
+const currentSlide = (project, index) => {
+  showSlides(project, slideIndex = index)
 }
 
-function showSlidesGG(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlidesGG");
-  var dots = document.getElementsByClassName("demoGG");
-  var captionText = document.getElementById("captionGG");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+const showSlides = (project, index) => {
+  const slides = document.getElementsByClassName("mySlides"  + project)
+  const dots = document.getElementsByClassName("demo" + project)
+  let captionText = document.getElementById("caption"  + project)
+  
+  if (index > slides.length) {
+    slideIndex = 1
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  
+  if (index < 1) {
+    slideIndex = slides.length
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-
-
-//Rails react
-
-// Open the Modal
-function openModalRR() {
-  document.getElementById("myModalRR").style.display = "block";
-}
-
-// Close the Modal
-function closeModalRR() {
-  document.getElementById("myModalRR").style.display = "none";
-}
-
-var slideIndexRR = 1;
-showSlidesRR(slideIndexRR);
-
-// Next/previous controls
-function plusSlidesRR(n) {
-  showSlidesRR(slideIndexRR += n);
-}
-
-// Thumbnail image controls
-function currentSlideRR(n) {
-  showSlidesRR(slideIndexRR = n);
-}
-
-function showSlidesRR(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlidesRR");
-  var dots = document.getElementsByClassName("demoRR");
-  var captionText = document.getElementById("captionRR");
-  if (n > slides.length) {slideIndexRR = 1}
-  if (n < 1) {slideIndexRR = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "")
   }
-  slides[slideIndexRR-1].style.display = "block";
-  dots[slideIndexRR-1].className += " active";
-  captionText.innerHTML = dots[slideIndexRR-1].alt;
+  
+  slides[slideIndex-1].style.display = "block"
+  dots[slideIndex-1].className += " active"
+  captionText.innerHTML = dots[slideIndex-1].alt
 }
