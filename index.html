@@ -43,6 +43,44 @@
     <section>
       <div>
         <h2 id="projects">My projects</h2>
+
+        <div class="project-title"><h3>dnd-gen</h3><a href="https://github.com/jonathan-lindqvist/dnd-gen"><img class="github" src="img/github.png" alt="Link to github page"></a><h5><a class="inlinelink" href="">Live demo</a></h5></div>
+          <p>
+            Small project where the user will be able to generate a DnD character. After the form is filled out or generated the user will be presented with a pdf which they can download.
+          </p>
+          
+
+          <div class="row-modal">
+            <img src="img/dnd-gen/dnd-gen-form.png" onclick="openModal('DND');currentSlide('DND',1)" class="hover-shadow modal-size-preview" alt="dnd-gen Form">
+            <img src="img/dnd-gen/dnd-gen-pdf.png" onclick="openModal('DND');currentSlide('DND',2)" class="hover-shadow modal-size-preview" alt="dnd-gen PDF">
+          </div>
+
+        <div id="myModalDND" class="modal">
+          <span class="close cursor" onclick="closeModal('DND')">&times;</span>
+          <div class="modal-content">
+
+            <div class="mySlidesDND slides">
+              <img src="img/dnd-gen/dnd-gen-form.png" class="selected-img" alt="dnd-gen Form">
+            </div>
+
+            <div class="mySlidesDND slides">
+              <img src="img/dnd-gen/dnd-gen-pdf.png" class="selected-img" alt="dnd-gen PDF">
+            </div>
+
+            <a class="prev" onclick="plusSlides('DND',-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides('DND',1)">&#10095;</a>
+
+            <div class="caption-container">
+              <p id="captionDND"></p>
+            </div>
+
+            <div class="thumbnails">
+              <img class="demoDND demo modal-size" src="img/dnd-gen/dnd-gen-form.png" onclick="currentSlide('DND',1)" alt="dnd-gen Form">
+              <img class="demoDND demo modal-size" src="img/dnd-gen/dnd-gen-pdf.png" onclick="currentSlide('DND',2)" alt="dnd-gen PDF">
+            </div>
+          </div>
+        </div> 
+        
         <div class="project-title"><h3>GGhub</h3><a href="https://github.com/jonathan-lindqvist/ggHUB"><img class="github" src="img/github.png" alt="Link to github page"></a></div>
         <p>
           GGHub was my first "real" spare time project. The main purpose with the 
