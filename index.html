@@ -53,15 +53,15 @@
         </p>
          <!-- Images used to open the lightbox -->
         <div class="row-modal">
-            <img src="img/gghub/gghub-home.png" onclick="openModalGG();currentSlideGG(1)" class="hover-shadow modal-size-preview" alt="GGHub Home">
-            <img src="img/gghub/gghub-feed.png" onclick="openModalGG();currentSlideGG(2)" class="hover-shadow modal-size-preview" alt="GGHub Feed">
-            <img src="img/gghub/gghub-news.png" onclick="openModalGG();currentSlideGG(3)" class="hover-shadow modal-size-preview" alt="GGHub News">
-            <img src="img/gghub/gghub-players.png" onclick="openModalGG();currentSlideGG(4)" class="hover-shadow modal-size-preview" alt="GGHub Player">
+            <img src="img/gghub/gghub-home.png" onclick="openModal('GG');currentSlide('GG',1)" class="hover-shadow modal-size-preview" alt="GGHub Home">
+            <img src="img/gghub/gghub-feed.png" onclick="openModal('GG');currentSlide('GG',2)" class="hover-shadow modal-size-preview" alt="GGHub Feed">
+            <img src="img/gghub/gghub-news.png" onclick="openModal('GG');currentSlide('GG',3)" class="hover-shadow modal-size-preview" alt="GGHub News">
+            <img src="img/gghub/gghub-player.png" onclick="openModal('GG');currentSlide('GG',4)" class="hover-shadow modal-size-preview" alt="GGHub Player">
         </div>
 
         <!-- The Modal/Lightbox -->
         <div id="myModalGG" class="modal">
-          <span class="close cursor" onclick="closeModalGG()">&times;</span>
+          <span class="close cursor" onclick="closeModal('GG')">&times;</span>
           <div class="modal-content">
 
             <div class="mySlidesGG">
@@ -97,8 +97,8 @@
             </div>
 
             <!-- Next/previous controls -->
-            <a class="prev" onclick="plusSlidesGG(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlidesGG(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlides('GG',-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides('GG',1)">&#10095;</a>
 
             <!-- Caption text -->
             <div class="caption-container">
@@ -107,14 +107,14 @@
 
             <!-- Thumbnail image controls -->
             <div class="thumbnails">
-                <img class="demoGG modal-size" src="img/gghub/gghub-home.png" onclick="currentSlideGG(1)" alt="GGHub Home">
-                <img class="demoGG modal-size" src="img/gghub/gghub-feed.png" onclick="currentSlideGG(2)" alt="GGHub Feed">
-                <img class="demoGG modal-size" src="img/gghub/gghub-news.png" onclick="currentSlideGG(3)" alt="GGHub News">
-                <img class="demoGG modal-size" src="img/gghub/gghub-player.png" onclick="currentSlideGG(4)" alt="GGHub Player">
-                <img class="demoGG modal-size" src="img/gghub/gghub-players.png" onclick="currentSlideGG(5)" alt="GGHub Players">
-                <img class="demoGG modal-size" src="img/gghub/gghub-settings.png" onclick="currentSlideGG(6)" alt="GGHub Settings">
-                <img class="demoGG modal-size" src="img/gghub/gghub-signin.png" onclick="currentSlideGG(7)" alt="GGHub Sign In">
-                <img class="demoGG modal-size" src="img/gghub/gghub-signup.png" onclick="currentSlideGG(8)" alt="GGHub Sign Up">
+                <img class="demoGG modal-size" src="img/gghub/gghub-home.png" onclick="currentSlide('GG',1)" alt="GGHub Home">
+                <img class="demoGG modal-size" src="img/gghub/gghub-feed.png" onclick="currentSlide('GG',2)" alt="GGHub Feed">
+                <img class="demoGG modal-size" src="img/gghub/gghub-news.png" onclick="currentSlide('GG',3)" alt="GGHub News">
+                <img class="demoGG modal-size" src="img/gghub/gghub-player.png" onclick="currentSlide('GG',4)" alt="GGHub Player">
+                <img class="demoGG modal-size" src="img/gghub/gghub-players.png" onclick="currentSlide('GG',5)" alt="GGHub Players">
+                <img class="demoGG modal-size" src="img/gghub/gghub-settings.png" onclick="currentSlide('GG',6)" alt="GGHub Settings">
+                <img class="demoGG modal-size" src="img/gghub/gghub-signin.png" onclick="currentSlide('GG',7)" alt="GGHub Sign In">
+                <img class="demoGG modal-size" src="img/gghub/gghub-signup.png" onclick="currentSlide('GG',8)" alt="GGHub Sign Up">
             </div>
           </div>
         </div> 
@@ -142,15 +142,15 @@
         </p>
         <!-- Images used to open the lightbox -->
         <div class="row-modal">
-          <img src="img/rails-react/rails-react-home.png" onclick="openModalRR();currentSlideRR(1)" class="hover-shadow modal-size-preview" alt="rails-react Home">
-          <img src="img/rails-react/rails-react-task.png" onclick="openModalRR();currentSlideRR(2)" class="hover-shadow modal-size-preview" alt="rails-react Task">
-          <img src="img/rails-react/rails-react-edit.png" onclick="openModalRR();currentSlideRR(3)" class="hover-shadow modal-size-preview" alt="rails-react Edit">
-          <img src="img/rails-react/rails-react-create.png" onclick="openModalRR();currentSlideRR(4)" class="hover-shadow modal-size-preview" alt="rails-react Create">
+          <img src="img/rails-react/rails-react-home.png" onclick="openModal('RR');currentSlide('RR',1)" class="hover-shadow modal-size-preview" alt="rails-react Home">
+          <img src="img/rails-react/rails-react-task.png" onclick="openModal('RR');currentSlide('RR',2)" class="hover-shadow modal-size-preview" alt="rails-react Task">
+          <img src="img/rails-react/rails-react-edit.png" onclick="openModal('RR');currentSlide('RR',3)" class="hover-shadow modal-size-preview" alt="rails-react Edit">
+          <img src="img/rails-react/rails-react-create.png" onclick="openModal('RR');currentSlide('RR',4)" class="hover-shadow modal-size-preview" alt="rails-react Create">
       </div>
 
       <!-- The Modal/Lightbox -->
       <div id="myModalRR" class="modal">
-        <span class="close cursor" onclick="closeModalRR()">&times;</span>
+        <span class="close cursor" onclick="closeModal('RR')">&times;</span>
         <div class="modal-content">
 
           <div class="mySlidesRR">
@@ -170,8 +170,8 @@
           </div>
 
           <!-- Next/previous controls -->
-          <a class="prev" onclick="plusSlidesRR(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlidesRR(1)">&#10095;</a>
+          <a class="prev" onclick="plusSlides('RR',-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides('RR',1)">&#10095;</a>
 
           <!-- Caption text -->
           <div class="caption-container">
@@ -180,10 +180,10 @@
 
           <!-- Thumbnail image controls -->
           <div class="thumbnails">
-              <img class="demoRR modal-size" src="img/rails-react/rails-react-home.png" onclick="currentSlideRR(1)" alt="rails-react Home">
-              <img class="demoRR modal-size" src="img/rails-react/rails-react-task.png" onclick="currentSlideRR(2)" alt="rails-react Task">
-              <img class="demoRR modal-size" src="img/rails-react/rails-react-edit.png" onclick="currentSlideRR(3)" alt="rails-react Edit">
-              <img class="demoRR modal-size" src="img/rails-react/rails-react-create.png" onclick="currentSlideRR(4)" alt="rails-react Create">
+              <img class="demoRR modal-size" src="img/rails-react/rails-react-home.png" onclick="currentSlide('RR',1)" alt="rails-react Home">
+              <img class="demoRR modal-size" src="img/rails-react/rails-react-task.png" onclick="currentSlide('RR',2)" alt="rails-react Task">
+              <img class="demoRR modal-size" src="img/rails-react/rails-react-edit.png" onclick="currentSlide('RR',3)" alt="rails-react Edit">
+              <img class="demoRR modal-size" src="img/rails-react/rails-react-create.png" onclick="currentSlide('RR',4)" alt="rails-react Create">
           </div>
         </div>
       </div> 
