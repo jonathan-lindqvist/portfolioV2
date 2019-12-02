@@ -130,7 +130,7 @@ li {
 }
 
 .github{
-  margin-left: 1.5625em;
+  margin: 0 1.5625em;
   height: 2.5em;
   width: 2.5em;
   display: block;
