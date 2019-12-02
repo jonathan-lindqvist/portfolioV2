@@ -109,7 +109,7 @@ img.demo {
 
 .active,
 .demo:hover {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 img.hover-shadow {

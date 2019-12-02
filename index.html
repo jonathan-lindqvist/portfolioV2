@@ -44,7 +44,35 @@
       <div>
         <h2 id="projects">My projects</h2>
 
-        <div class="project-title"><h3>dnd-gen</h3><a href="https://github.com/jonathan-lindqvist/dnd-gen"><img class="github" src="img/github.png" alt="Link to github page"></a><h5><a class="inlinelink" href="">Live demo</a></h5></div>
+        <div class="project-title"><h3>watch-alone</h3><a href="https://github.com/jonathan-lindqvist/watch-alone"><img class="github" src="img/github.png" alt="Link to github page"></a><h5><a class="inlinelink" href="https://jonathan-lindqvist.github.io/watch-alone/">Live demo</a></h5></div>
+          <p>
+            Like watch2gether but just for you. Made in React with TypeScript.
+          </p>
+          
+
+          <div class="row-modal">
+            <img src="img/watch-alone/watch-alone.png" onclick="openModal('WA');currentSlide('WA',1)" class="hover-shadow modal-size-preview" alt="watch-alone Start">
+          </div>
+
+        <div id="myModalWA" class="modal">
+          <span class="close cursor" onclick="closeModal('WA')">&times;</span>
+          <div class="modal-content">
+
+            <div class="mySlidesWA slides">
+              <img src="img/watch-alone/watch-alone.png" class="selected-img" alt="watch-alone Start">
+            </div>
+
+            <div class="caption-container">
+              <p id="captionWA"></p>
+            </div>
+
+            <div class="thumbnails">
+              <img class="demoWA demo modal-size" src="img/watch-alone/watch-alone.png" onclick="currentSlide('WA',1)" alt="watch-alone Start">
+            </div>
+          </div>
+        </div> 
+
+        <div class="project-title"><h3>dnd-gen</h3><a href="https://github.com/jonathan-lindqvist/dnd-gen"><img class="github" src="img/github.png" alt="Link to github page"></a><h5><a class="inlinelink" href="https://jonathan-lindqvist.github.io/dnd-gen/">Live demo</a></h5></div>
           <p>
             Small project where the user will be able to generate a DnD character. After the form is filled out or generated the user will be presented with a pdf which they can download.
           </p>
@@ -80,7 +108,7 @@
             </div>
           </div>
         </div> 
-        
+
         <div class="project-title"><h3>GGhub</h3><a href="https://github.com/jonathan-lindqvist/ggHUB"><img class="github" src="img/github.png" alt="Link to github page"></a></div>
         <p>
           GGHub was my first "real" spare time project. The main purpose with the 
