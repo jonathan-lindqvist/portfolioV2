@@ -51,7 +51,7 @@
 }
 
 /* Hide the slides by default */
-.mySlidesGG, .mySlidesRR {
+.slides{
   display: none;
   object-fit: contain;
 }
@@ -103,13 +103,12 @@
   color: white;
 }
 
-img.demoGG, img.demoRR {
+img.demo {
   opacity: 0.6;
 }
 
 .active,
-.demoRR:hover,
-.demoGG:hover {
+.demo:hover {
   opacity: 1;
 }
 
@@ -171,7 +170,7 @@ img.hover-shadow {
     display: none;
   }
 
-  .demoGG, .demoRR{
+  .demo{
     opacity: 1 !important;
   }
 }
