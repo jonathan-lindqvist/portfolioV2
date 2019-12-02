@@ -44,6 +44,42 @@
       <div>
         <h2 id="projects">My projects</h2>
 
+        <div class="project-title"><h3>todo-ts</h3><a href="https://github.com/jonathan-lindqvist/todo-ts"><img class="github" src="img/github.png" alt="Link to github page"></a><h5><a class="inlinelink" href="https://jonathan-lindqvist.github.io/todo-ts/">Live demo</a></h5></div>
+          <p>
+            Small todo app made with TypeScript.
+          </p>
+          
+
+          <div class="row-modal">
+            <img src="img/todo-ts/todo-ts-start.png" onclick="openModal('TT');currentSlide('TT',1)" class="hover-shadow modal-size-preview" alt="todo-ts Start">
+            <img src="img/todo-ts/todo-ts-todos.png" onclick="openModal('TT');currentSlide('TT',2)" class="hover-shadow modal-size-preview" alt="todo-ts Todos">
+          </div>
+
+        <div id="myModalTT" class="modal">
+          <span class="close cursor" onclick="closeModal('TT')">&times;</span>
+          <div class="modal-content">
+
+            <div class="mySlidesTT slides">
+              <img src="img/todo-ts/todo-ts-start.png" class="selected-img" alt="todo-ts Start">
+            </div>
+            <div class="mySlidesTT slides">
+              <img src="img/todo-ts/todo-ts-todos.png" class="selected-img" alt="todo-ts Todos">
+            </div>
+
+            <a class="prev" onclick="plusSlides('TT',-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides('TT',1)">&#10095;</a>
+
+            <div class="caption-container">
+              <p id="captionTT"></p>
+            </div>
+
+            <div class="thumbnails">
+              <img class="demoTT demo modal-size" src="img/todo-ts/todo-ts-start.png" onclick="currentSlide('TT',1)" alt="todo-ts Start">
+              <img class="demoTT demo modal-size" src="img/todo-ts/todo-ts-todos.png" onclick="currentSlide('TT',2)" alt="todo-ts Todos">
+            </div>
+          </div>
+        </div> 
+
         <div class="project-title"><h3>watch-alone</h3><a href="https://github.com/jonathan-lindqvist/watch-alone"><img class="github" src="img/github.png" alt="Link to github page"></a><h5><a class="inlinelink" href="https://jonathan-lindqvist.github.io/watch-alone/">Live demo</a></h5></div>
           <p>
             Like watch2gether but just for you. Made in React with TypeScript.
