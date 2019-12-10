@@ -44,6 +44,52 @@
       <div>
         <h2 id="projects">My projects</h2>
 
+        <div class="project-title"><h3>spacex-graphql</h3><a href="https://github.com/jonathan-lindqvist/spacex-graphql"><img class="github" src="img/github.png" alt="Link to github page"></a><h5><a class="inlinelink" href="https://jonathan-lindqvist.github.io/spacex-graphql/">Live demo</a></h5></div>
+          <p>
+            A more serious project with React, GraphQL and TypeScript. The site allows the user to navigate between different SpaceX missions.
+          </p>
+          
+
+          <div class="row-modal">
+            <img src="img/spacex-graphql/spacex-graphql-1.png" onclick="openModal('Spacex');currentSlide('Spacex',1)" class="hover-shadow modal-size-preview" alt="spacex-graphql Mission example 1">
+            <img src="img/spacex-graphql/spacex-graphql-2.png" onclick="openModal('Spacex');currentSlide('Spacex',2)" class="hover-shadow modal-size-preview" alt="spacex-graphql Mission example 2">
+            <img src="img/spacex-graphql/spacex-graphql-3.png" onclick="openModal('Spacex');currentSlide('Spacex',3)" class="hover-shadow modal-size-preview" alt="spacex-graphql Mission example 3">
+            <img src="img/spacex-graphql/spacex-graphql-4.png" onclick="openModal('Spacex');currentSlide('Spacex',4)" class="hover-shadow modal-size-preview" alt="spacex-graphql Mission example 4">
+          </div>
+
+        <div id="myModalSpacex" class="modal">
+          <span class="close cursor" onclick="closeModal('Spacex')">&times;</span>
+          <div class="modal-content">
+
+            <div class="mySlidesSpacex slides">
+              <img src="img/spacex-graphql/spacex-graphql-1.png" class="selected-img" alt="spacex-graphql Mission example 1">
+            </div>
+            <div class="mySlidesSpacex slides">
+              <img src="img/spacex-graphql/spacex-graphql-2.png" class="selected-img" alt="spacex-graphql Mission example 2">
+            </div>
+            <div class="mySlidesSpacex slides">
+              <img src="img/spacex-graphql/spacex-graphql-3.png" class="selected-img" alt="spacex-graphql Mission example 3">
+            </div>
+            <div class="mySlidesSpacex slides">
+              <img src="img/spacex-graphql/spacex-graphql-4.png" class="selected-img" alt="spacex-graphql Mission example 4">
+            </div>
+
+            <a class="prev" onclick="plusSlides('Spacex',-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides('Spacex',1)">&#10095;</a>
+
+            <div class="caption-container">
+              <p id="captionSpacex"></p>
+            </div>
+
+            <div class="thumbnails">
+              <img class="demoSpacex demo modal-size" src="img/spacex-graphql/spacex-graphql-1.png" onclick="currentSlide('Spacex',1)" alt="spacex-graphql Mission example 1">
+              <img class="demoSpacex demo modal-size" src="img/spacex-graphql/spacex-graphql-2.png" onclick="currentSlide('Spacex',2)" alt="spacex-graphql Mission example 2">
+              <img class="demoSpacex demo modal-size" src="img/spacex-graphql/spacex-graphql-3.png" onclick="currentSlide('Spacex',3)" alt="spacex-graphql Mission example 3">
+              <img class="demoSpacex demo modal-size" src="img/spacex-graphql/spacex-graphql-4.png" onclick="currentSlide('Spacex',4)" alt="spacex-graphql Mission example 4">
+            </div>
+          </div>
+        </div> 
+
         <div class="project-title"><h3>todo-ts</h3><a href="https://github.com/jonathan-lindqvist/todo-ts"><img class="github" src="img/github.png" alt="Link to github page"></a><h5><a class="inlinelink" href="https://jonathan-lindqvist.github.io/todo-ts/">Live demo</a></h5></div>
           <p>
             Small todo app made with TypeScript.
