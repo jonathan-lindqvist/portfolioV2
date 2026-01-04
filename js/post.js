@@ -38,6 +38,7 @@ fetch(`/content/posts/${file}`)
       document.title = file.replace(/[-_]/g, " ").replace(/\.\w+$/, "");
     }
 
+    console.log(meta);
     container.innerHTML = `
       <article class="post-content">
         ${meta.title ? `<h1>${meta.title}</h1>` : ""}
