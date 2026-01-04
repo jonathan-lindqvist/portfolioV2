@@ -32,6 +32,12 @@ fetch(`/content/posts/${file}`)
       });
     }
 
+    if (meta.title) {
+      document.title = meta.title;
+    } else {
+      document.title = file.replace(/[-_]/g, " ").replace(/\.\w+$/, "");
+    }
+
     container.innerHTML = `
       <article class="post-content">
         ${meta.title ? `<h1>${meta.title}</h1>` : ""}
