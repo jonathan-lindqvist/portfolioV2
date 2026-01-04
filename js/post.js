@@ -9,7 +9,7 @@ if (!file) {
   throw new Error("No post file provided");
 }
 
-fetch(`/content/posts/${file}`)
+fetch(`content/posts/${file}`)
   .then((res) => {
     if (!res.ok) {
       throw new Error(`Failed to load post: ${res.status}`);
