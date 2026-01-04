@@ -20,13 +20,13 @@ fetch(`/content/posts/${file}`)
     let meta = {};
     let body = text;
 
-    // Front-matter is optional
-    if (text.startsWith("---")) {
-      const parts = text.split("---");
-      const metaLines = parts[1].trim().split("\n");
-      body = parts.slice(2).join("---");
+    const fm = text.match(/^---\s*([\s\S]*?)\s*---\s*([\s\S]*)$/);
 
-      metaLines.forEach((line) => {
+    if (fm) {
+      body = fm[2];
+
+      fm[1].split("\n").forEach((line) => {
+        if (!line.trim()) return;
         const [key, ...rest] = line.split(":");
         meta[key.trim()] = rest.join(":").trim();
       });
@@ -41,7 +41,7 @@ fetch(`/content/posts/${file}`)
     container.innerHTML = `
       <article class="post-content">
         ${meta.title ? `<h1>${meta.title}</h1>` : ""}
-        ${meta.date ? `<time>${meta.date}</time>` : ""}
+        ${meta.date ? `<time datetime="${meta.date}">${meta.date}</time>` : ""}
         ${parseMarkdown(body)}
       </article>
     `;
