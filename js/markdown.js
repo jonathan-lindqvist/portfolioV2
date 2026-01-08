@@ -61,12 +61,32 @@ export function parseMarkdown(md) {
     }
   );
 
-  // Paragraphs (avoid wrapping block elements)
+  // Paragraphs (robust handling after headers)
   html = html
     .split(/\n{2,}/)
-    .map(block => {
-      if (/^<(h\d|ul|ol|li|p)/.test(block.trim())) return block;
-      return `<p>${block.trim()}</p>`;
+    .flatMap(block => {
+      const trimmed = block.trim();
+
+      // Header followed by text in same block
+      if (/^<h\d/.test(trimmed)) {
+        const match = trimmed.match(
+          /^(<h\d[^>]*>.*?<\/h\d>)([\s\S]+)$/i
+        );
+
+        if (match) {
+          return [
+            match[1],
+            `<p>${match[2].trim()}</p>`
+          ];
+        }
+
+        return trimmed;
+      }
+
+      if (/^<(ul|ol|li|p)/.test(trimmed)) return trimmed;
+      if (!trimmed) return "";
+
+      return `<p>${trimmed}</p>`;
     })
     .join("");
 
