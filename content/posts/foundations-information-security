@@ -1,0 +1,17 @@
+---
+title: Foundations of Information Security
+date: 2026-01-29
+tags: books cybersecurity
+---
+I recently went through some old book purchases I made and found Foundations of Information Security by Jason Andress. I just finished it, and it was alright. To clarify, it is not a bad book, but for me it would have been better if I had read it earlier. As the name suggests, it is a book that covers the basics, and it does so in about 250 pages. Since I have been interested in cybersecurity for some time now, there was not a lot of new information for me.
+
+# Why read a foundational book now?
+When I started studying for the SSCP exam, I was looking for something that I could easily read on the go. I also wanted a reminder of the basics and a way to find any gaps I might have, and for that I would say it fit the description. For example, I am not confident in the extended concepts around the CIA triad, and it was nice to remind myself of them. I also wanted to know more about incident response, which the book covers.
+
+# Who is it for?
+Reasonably, I do not recommend the book for a seasoned professional. That can more or less be figured out from the title. I do recommend it to people who want to understand what information security is, someone who is just getting started in cybersecurity, and anyone planning to read it before starting to study for the SSCP exam. This is because it gives a nice overview of many fields within information security, so it is a good starting point to figure out where to begin a deep dive. That is one reason why I might return to the book again in the future.
+
+However, there is one thing that I do not like about it. At times it can make defenses sound trivial. For example, when the book talks about directory traversal, it says: “In many cases, filtering out special characters, such as the ones described and *, %, ‘, ;, and / will defeat such attacks entirely.” This makes it sound really simple. I do understand that the general idea is to validate and filter input, but there are many ways to do it, and they are not equally good.
+
+# Final thoughts
+Overall, I see this book as a compact refresher and a solid entry point rather than a deep technical guide. If you are early in your cybersecurity journey, it gives you a map of the landscape. If you already have experience, it works better as a checklist to revisit fundamentals and spot weak areas. For me, it served as a reminder that even basic material is worth revisiting, especially when preparing for certifications or trying to structure existing knowledge.
