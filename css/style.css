@@ -243,7 +243,6 @@ h3:hover .header-anchor {
   margin-top: 1.5rem;
 }
 
-
 /** Media queries **/
 @media (max-width: 640px) {
   header h1 {
@@ -307,4 +306,73 @@ small {
 svg {
   fill: currentColor;
   stroke: currentColor;
+}
+
+/** Cookie Banner **/
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 16px;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.cookie-banner-content {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.cookie-banner-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.cookie-banner-buttons {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.cookie-banner-buttons button {
+  background: var(--text);
+  color: var(--bg);
+  border: 1px solid var(--text);
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.cookie-banner-buttons button:hover {
+  opacity: 0.8;
+}
+
+#cookie-decline {
+  background: var(--bg);
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .cookie-banner-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookie-banner-buttons {
+    justify-content: stretch;
+  }
+
+  .cookie-banner-buttons button {
+    flex: 1;
+  }
 }
