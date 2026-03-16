@@ -186,6 +186,30 @@ a:hover {
   margin-bottom: 32px;
 }
 
+.post-search {
+  margin-bottom: 16px;
+}
+
+.post-search label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+}
+
+.post-search input {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  font-size: 0.95rem;
+}
+
+.post-search input::placeholder {
+  color: var(--muted);
+}
+
 .post-filters button {
   background: none;
   border: 1px solid var(--border);

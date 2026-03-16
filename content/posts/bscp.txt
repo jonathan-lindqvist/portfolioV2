@@ -1,0 +1,7 @@
+---
+title: Becoming BSCP
+date: 2026-03-16
+tags: cybersecurity
+---
+
+Burp Suite Certified Practitioner (BSCP)
