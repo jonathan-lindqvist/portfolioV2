@@ -2,14 +2,17 @@ const buttons = document.querySelectorAll(".post-filters button");
 const posts = document.querySelectorAll(".post-item");
 const searchInput = document.querySelector("#post-search-input");
 const allowedFilters = new Set(
-  Array.from(buttons).map((button) => button.dataset.filter)
+  Array.from(buttons).map((button) => button.dataset.filter),
 );
 
 let currentFilter = "all";
 let currentSearchTerm = "";
 
 function normalizeSearchTerm(value) {
-  return String(value ?? "").trim().toLowerCase().slice(0, 100);
+  return String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .slice(0, 100);
 }
 
 function sanitizeFilter(filter) {
@@ -29,7 +32,8 @@ function applyFilters() {
     const tags = post.dataset.tags.split(" ");
     const matchesTag = currentFilter === "all" || tags.includes(currentFilter);
     const matchesSearch =
-      currentSearchTerm.length === 0 || getPostText(post).includes(currentSearchTerm);
+      currentSearchTerm.length === 0 ||
+      getPostText(post).includes(currentSearchTerm);
     const show = matchesTag && matchesSearch;
 
     post.style.display = show ? "" : "none";

@@ -1,0 +1,38 @@
+/** Color mode **/
+a {
+  color: var(--text);
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.nav a,
+.social a,
+.project-links a,
+.back-nav a {
+  color: var(--text);
+}
+
+time,
+small {
+  color: var(--muted);
+}
+
+.post-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.project {
+  border-left: 3px solid var(--text);
+}
+
+.post-tags li,
+.project-tags li {
+  border: 1px solid var(--text);
+}
+
+svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
