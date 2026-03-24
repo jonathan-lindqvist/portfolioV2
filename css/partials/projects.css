@@ -12,8 +12,12 @@
 
 .project header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+}
+
+.project h2 {
+  margin: 0;
 }
 
 .project-links a {
@@ -22,6 +26,17 @@
   gap: 6px;
   text-decoration: none;
   color: #000;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.project p {
+  margin: 8px 0 0;
 }
 
 .project-links svg {
