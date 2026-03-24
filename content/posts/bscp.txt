@@ -1,7 +1,93 @@
 ---
-title: Becoming BSCP
+title: Passing the BSCP exam
 date: 2026-03-16
 tags: cybersecurity
 ---
 
-Burp Suite Certified Practitioner (BSCP)
+I passed the Burp Suite Certified Practitioner (BSCP) exam, and like many who have completed it, I am sharing my thoughts on the exam and the preparation process.
+
+# Background
+My background is in software engineering, with a long-standing interest in cybersecurity. I have used Burp Suite previously on platforms like TryHackMe, but without a deep focus on Burp Suite specifically and without any use of the professional version. I also have solid prior experience with web development. I also want to mention that passing the BSCP exam was part of my work, and I was thus able to focus fully on it.
+
+This context should help you gauge how relevant the following information may be.
+
+# Learning and preparing
+After spending basically three months full-time completing all of PortSwigger's [labs](https://portswigger.net/web-security/all-labs) (with Burp Suite Professional), I made my first attempt, which I failed, but I passed a week later. Their labs are a great resource for both becoming familiar with Burp Suite and learning lots of different topics. So I recommend going through all of their [topics](https://portswigger.net/web-security/all-topics) at least once, and then a second time for the harder topics.
+
+For the first pass, I recommend taking it slow, documenting your learning, and using the hints and solutions if needed. Just make sure you understand and actually try first. Then do a second, and maybe even a third, pass on the labs you found extra challenging.
+
+Regarding the different types of labs (apprentice, practitioner, and expert), I did not even touch the expert ones. I only read the setup and solution for some of them.
+
+Going through the different topics can be frustrating, as some topics overlap and some even require prior knowledge from other topics. So the list below is my recommended order for doing them. It might not be perfect, but it is a starting point. I have tried to put most of the "easy" topics at the beginning, but I also tried to minimize the overlap so that you have the prerequisites for each topic. Lastly, I put some easy topics at the end because motivation can be low when grinding through the topics, and it can be nice to switch things up.
+
+- Information disclosure
+- Access control
+- Path traversal
+- JWT attacks
+- SQL injection
+- NoSQL injection
+- CSRF
+- GraphQL API vulnerabilities
+- OAuth authentication
+- DOM-based vulnerabilities
+- XSS
+- CORS
+- Prototype pollution
+- API Testing
+- SSRF
+- HTTP Host header attacks
+- Clickjacking
+- XXE
+- Websockets
+- Race conditions
+- Command injection
+- File upload vulnerabilities
+- SSTI
+- Insecure deserialization
+- Web cache poisoning
+- Web cache deception
+- Business logic vulnerabilities
+- HTTP request smuggling
+- Web LLM attacks
+- Essential skills
+
+You might have noticed that there are learning paths. While they look great at first, I later found the layout a bit annoying, so I stuck to the topic pages, as they seemed to have the exact same information.
+
+After finishing all the labs, I recommend doing at least 30-ish mystery labs. It is good practice, as it forces you to find the vulnerability yourself. Of course, you will recognize some labs here and there, but it helps build the habit. From this, you will most likely create your own checklist of things to do in order to make sure you have covered the whole attack surface.
+
+Finally, you can move on to the practice exams, and depending on the result, you might want to do some labs or read some topics again.
+
+## Other resources
+There are lots of people sharing their tips and tricks for the BSCP exam. Here are some that I found helpful to read/watch through to prepare better (in no particular order).
+
+- [Juan Botes Guide](https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study)
+- [BSCP checklist](https://bscp.guide/)
+- [Payload All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master)
+- [Juan Botes Youtube BSCP playlist](https://www.youtube.com/playlist?list=PLsDxQTEdg_YkVMP6PybE7I-hAdhR7adem)
+- [DCKento lab payloads](https://github.com/DCKento/Burp-Suite-Certified-Practitioner-Notes/blob/main/BSCP%20Lab%20Commands.csv)
+- [PinkDraconian BSCP review and tips](https://www.youtube.com/watch?v=npl7cenAHlY)
+- [Leonardo Tamiano BSCP review and tips](https://blog.leonardotamiano.xyz/tech/bscp-technical-guide/)
+
+# The exam
+As you probably already know, the format is that you have four hours to find six vulnerabilities and exploit them across two apps (three vulnerabilities each). Interestingly, I have not found one person who seems to have passed it on their first try, but I did not do a deep dive into that.
+
+The time is enough if you are prepared. It is easy to sink time into minor things just because you are not 100% confident in the **methodology** for tackling some challenges. The exam is not one fixed set of challenges, so you will not necessarily get the same setup as I did. 
+
+I can confidently say that I would have passed on the first or second attempt if I had come more prepared. But as with all things, it is hard to know what you do not know, and I learned a lot from those first two attempts. So take your time, relax, and work through the problems in a logical manner. 
+
+Also, a final tip: do not try to attack both websites at once. Do it one by one, just to make it easier for yourself.
+
+## First attempt
+After spending about 15 minutes confused and not finding a vulnerability, I finally found it. Then the second one came quickly after that, and it was smooth sailing until the second app, where I once again was unsure what vulnerability there was to get a foothold. Even when I found it, I misunderstood how to exploit it, and when I figured it out, I did not have time to continue with the next vulnerability.
+
+The lesson learned here was that there were gaps in my personal checklist, and I went down a rabbit hole and spent too much time there.
+
+## Second attempt
+I made my second attempt three days later, in the morning, and the same downfall happened again. The only difference was that I encountered it at the beginning. I found the vulnerability but had a hard time adapting it to get a foothold. When I finally managed to exploit it, I was a little stressed. I still managed to find and exploit three more vulnerabilities, but I eventually ran out of time.
+
+Lesson learned: I did not know enough about a particular approach and topic, i.e., I was not prepared enough.
+
+## Third attempt
+Two days later, I made my third attempt, and the first change I made was starting the exam at a different time. I made the previous attempts in the morning, but this one was late in the evening. The exam was no problem this time, I quickly found the vulnerabilities and was able to exploit them. It was only the last one that made me a bit unsure at first, but I knew roughly where to look and could figure it out from there.
+
+I finished the exam in under two hours and had my certificate two days later. I hope this was useful for anyone planning to take and pass the BSCP exam.
