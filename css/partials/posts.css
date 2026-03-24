@@ -133,6 +133,10 @@
   margin: 0 0 1rem;
 }
 
+.post-content {
+  padding-bottom: clamp(8rem, 40vh, 18rem);
+}
+
 .post-content a {
   color: #0b66c3;
   text-decoration: underline;
