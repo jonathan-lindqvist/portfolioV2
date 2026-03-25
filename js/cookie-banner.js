@@ -1,43 +1,53 @@
 // Cookie consent management
-(function () {
-  const CONSENT_KEY = "analytics-consent";
-  const BANNER_ID = "cookie-banner";
-
-  function hasConsent() {
-    return localStorage.getItem(CONSENT_KEY) === "true";
+class CookieBanner {
+  constructor() {
+    this.CONSENT_KEY = "analytics-consent";
+    this.BANNER_ID = "cookie-banner";
+    this.GA_MEASUREMENT_ID = "G-XG4NEZHBJM";
   }
 
-  function setConsent(value) {
-    localStorage.setItem(CONSENT_KEY, value);
+  hasConsent() {
+    return localStorage.getItem(this.CONSENT_KEY) === "true";
   }
 
-  function loadGoogleAnalytics() {
-    const GA_MEASUREMENT_ID = "G-XG4NEZHBJM";
+  setConsent(value) {
+    localStorage.setItem(this.CONSENT_KEY, value);
+  }
 
-    const script1 = document.createElement("script");
-    script1.async = true;
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    document.head.appendChild(script1);
+  loadGoogleAnalytics() {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${this.GA_MEASUREMENT_ID}`;
+
+    if (!document.head) {
+      console.error("Document head not found");
+      return;
+    }
+
+    document.head.appendChild(script);
 
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+    const gtag = (...args) => window.dataLayer.push(args);
     gtag("js", new Date());
-    gtag("config", GA_MEASUREMENT_ID);
+    gtag("config", this.GA_MEASUREMENT_ID);
   }
 
-  function removeBanner() {
-    const banner = document.getElementById(BANNER_ID);
+  removeBanner() {
+    const banner = document.getElementById(this.BANNER_ID);
     if (banner) {
       banner.style.opacity = "0";
       setTimeout(() => banner.remove(), 300);
     }
   }
 
-  function createBanner() {
+  createBanner() {
+    if (!document.body) {
+      console.error("Document body not found");
+      return;
+    }
+
     const banner = document.createElement("div");
-    banner.id = BANNER_ID;
+    banner.id = this.BANNER_ID;
     banner.innerHTML = `
       <div class="cookie-banner-content">
         <p>This site uses cookies for analytics.</p>
@@ -49,29 +59,46 @@
     `;
     document.body.appendChild(banner);
 
-    document.getElementById("cookie-accept").addEventListener("click", () => {
-      setConsent("true");
-      loadGoogleAnalytics();
-      removeBanner();
-    });
+    const acceptBtn = document.getElementById("cookie-accept");
+    const declineBtn = document.getElementById("cookie-decline");
 
-    document.getElementById("cookie-decline").addEventListener("click", () => {
-      setConsent("false");
-      removeBanner();
-    });
+    if (acceptBtn) {
+      acceptBtn.addEventListener("click", () => {
+        this.setConsent("true");
+        this.loadGoogleAnalytics();
+        this.removeBanner();
+      });
+    }
+
+    if (declineBtn) {
+      declineBtn.addEventListener("click", () => {
+        this.setConsent("false");
+        this.removeBanner();
+      });
+    }
   }
 
-  // Initialize on page load
-  document.addEventListener("DOMContentLoaded", () => {
-    const consent = localStorage.getItem(CONSENT_KEY);
+  init() {
+    const consent = localStorage.getItem(this.CONSENT_KEY);
 
     if (consent === null) {
       // No consent yet, show banner
-      createBanner();
+      this.createBanner();
     } else if (consent === "true") {
       // User has consented, load GA
-      loadGoogleAnalytics();
+      this.loadGoogleAnalytics();
     }
     // If consent is 'false', do nothing
+  }
+}
+
+// Initialize on page load
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    new CookieBanner().init();
   });
-})();
+} else {
+  new CookieBanner().init();
+}
+
+export { CookieBanner };

@@ -3,6 +3,12 @@ import { parseMarkdown } from "./markdown.js";
 const params = new URLSearchParams(window.location.search);
 const post = params.get("post");
 const container = document.getElementById("post");
+
+if (!container) {
+  console.error("Post container not found");
+  throw new Error("Missing required DOM element: #post");
+}
+
 const siteBaseUrl = "https://jonathanlindqvist.dev";
 
 function sanitizePostParam(value) {
@@ -18,6 +24,8 @@ function setCanonical(href) {
   const canonical = document.querySelector("link[rel='canonical']");
   if (canonical) {
     canonical.setAttribute("href", href);
+  } else {
+    console.warn("Canonical link element not found");
   }
 }
 
@@ -25,6 +33,8 @@ function setMetaDescription(description) {
   const metaDescription = document.querySelector("meta[name='description']");
   if (metaDescription) {
     metaDescription.setAttribute("content", description);
+  } else {
+    console.warn("Meta description element not found");
   }
 }
 

@@ -1,94 +1,130 @@
-const buttons = document.querySelectorAll(".post-filters button");
-const posts = document.querySelectorAll(".post-item");
-const searchInput = document.querySelector("#post-search-input");
-const allowedFilters = new Set(
-  Array.from(buttons).map((button) => button.dataset.filter),
-);
+class PostFilter {
+  constructor() {
+    this.buttons = document.querySelectorAll(".post-filters button");
+    this.posts = document.querySelectorAll(".post-item");
+    this.searchInput = document.querySelector("#post-search-input");
 
-let currentFilter = "all";
-let currentSearchTerm = "";
+    if (!this.buttons || !this.posts) {
+      console.warn("PostFilter: Required DOM elements not found");
+      return;
+    }
 
-function normalizeSearchTerm(value) {
-  return String(value ?? "")
-    .trim()
-    .toLowerCase()
-    .slice(0, 100);
-}
+    this.allowedFilters = new Set(
+      Array.from(this.buttons).map((button) => button.dataset.filter),
+    );
 
-function sanitizeFilter(filter) {
-  return allowedFilters.has(filter) ? filter : "all";
-}
+    this.currentFilter = "all";
+    this.currentSearchTerm = "";
 
-function getPostText(post) {
-  return post.textContent.toLowerCase();
-}
-
-function applyFilters() {
-  buttons.forEach((b) => {
-    b.classList.toggle("active", b.dataset.filter === currentFilter);
-  });
-
-  posts.forEach((post) => {
-    const tags = post.dataset.tags.split(" ");
-    const matchesTag = currentFilter === "all" || tags.includes(currentFilter);
-    const matchesSearch =
-      currentSearchTerm.length === 0 ||
-      getPostText(post).includes(currentSearchTerm);
-    const show = matchesTag && matchesSearch;
-
-    post.style.display = show ? "" : "none";
-  });
-}
-
-function updateURL() {
-  const url = new URL(window.location);
-
-  if (currentFilter === "all") {
-    url.searchParams.delete("tag");
-  } else {
-    url.searchParams.set("tag", currentFilter);
+    this.init();
   }
 
-  if (currentSearchTerm.length === 0) {
-    url.searchParams.delete("q");
-  } else {
-    url.searchParams.set("q", currentSearchTerm);
+  normalizeSearchTerm(value) {
+    return String(value ?? "")
+      .trim()
+      .toLowerCase()
+      .slice(0, 100);
   }
 
-  history.replaceState(null, "", url);
-}
+  sanitizeFilter(filter) {
+    return this.allowedFilters.has(filter) ? filter : "all";
+  }
 
-// Button clicks
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    currentFilter = sanitizeFilter(button.dataset.filter);
-    applyFilters();
-    updateURL();
-  });
-});
+  getPostText(post) {
+    return post?.textContent?.toLowerCase?.() ?? "";
+  }
 
-if (searchInput) {
-  searchInput.addEventListener("input", (event) => {
-    currentSearchTerm = normalizeSearchTerm(event.target.value);
-    applyFilters();
-    updateURL();
-  });
-}
+  applyFilters() {
+    if (!this.buttons || !this.posts) return;
 
-// Initial load (URL-based filter)
-const params = new URLSearchParams(window.location.search);
-const tagFromURL = params.get("tag");
-const searchFromURL = params.get("q");
+    this.buttons.forEach((b) => {
+      b.classList.toggle("active", b?.dataset?.filter === this.currentFilter);
+    });
 
-if (tagFromURL) {
-  currentFilter = sanitizeFilter(tagFromURL);
-}
+    this.posts.forEach((post) => {
+      if (!post?.dataset?.tags) return;
 
-if (searchFromURL) {
-  currentSearchTerm = normalizeSearchTerm(searchFromURL);
-  if (searchInput) {
-    searchInput.value = currentSearchTerm;
+      const tags = post.dataset.tags.split(" ");
+      const matchesTag =
+        this.currentFilter === "all" || tags.includes(this.currentFilter);
+      const matchesSearch =
+        this.currentSearchTerm.length === 0 ||
+        this.getPostText(post).includes(this.currentSearchTerm);
+      const show = matchesTag && matchesSearch;
+
+      post.style.display = show ? "" : "none";
+    });
+  }
+
+  updateURL() {
+    const url = new URL(window.location);
+
+    if (this.currentFilter === "all") {
+      url.searchParams.delete("tag");
+    } else {
+      url.searchParams.set("tag", this.currentFilter);
+    }
+
+    if (this.currentSearchTerm.length === 0) {
+      url.searchParams.delete("q");
+    } else {
+      url.searchParams.set("q", this.currentSearchTerm);
+    }
+
+    history.replaceState(null, "", url);
+  }
+
+  attachEventListeners() {
+    if (this.buttons) {
+      this.buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          this.currentFilter = this.sanitizeFilter(button.dataset.filter);
+          this.applyFilters();
+          this.updateURL();
+        });
+      });
+    }
+
+    if (this.searchInput) {
+      this.searchInput.addEventListener("input", (event) => {
+        this.currentSearchTerm = this.normalizeSearchTerm(event.target.value);
+        this.applyFilters();
+        this.updateURL();
+      });
+    }
+  }
+
+  loadFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    const tagFromURL = params.get("tag");
+    const searchFromURL = params.get("q");
+
+    if (tagFromURL) {
+      this.currentFilter = this.sanitizeFilter(tagFromURL);
+    }
+
+    if (searchFromURL) {
+      this.currentSearchTerm = this.normalizeSearchTerm(searchFromURL);
+      if (this.searchInput) {
+        this.searchInput.value = this.currentSearchTerm;
+      }
+    }
+  }
+
+  init() {
+    this.loadFromURL();
+    this.attachEventListeners();
+    this.applyFilters();
   }
 }
 
-applyFilters();
+// Initialize on DOM ready
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    new PostFilter();
+  });
+} else {
+  new PostFilter();
+}
+
+export { PostFilter };
